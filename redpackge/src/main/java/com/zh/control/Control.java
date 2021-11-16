@@ -30,5 +30,8 @@ public class Control {
         return DeletService.DeletPackge(FrontJson);
 
     }
-
+    @PostMapping("testPackge")
+    public JsonResult testPackge(@RequestBody Map<String,Object> FrontJson){
+        return null;
+    }
 }
