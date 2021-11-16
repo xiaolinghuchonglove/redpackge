@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.domain.Page;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -34,7 +35,5 @@ public class user {
                 ", books=" + books +
                 '}';
     }
-    public  Page<user> findBypage(){
-        Page<user>
-    }
+
 }
