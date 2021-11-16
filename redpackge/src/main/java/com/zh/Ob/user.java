@@ -34,7 +34,5 @@ public class user {
                 ", books=" + books +
                 '}';
     }
-    public  Page<user> findBypage(){
-        Page<user>
-    }
+
 }
