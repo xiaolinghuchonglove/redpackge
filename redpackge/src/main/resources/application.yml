@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/redpackge?charset=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: 1996726724
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    show-sql: true
+
+
+
