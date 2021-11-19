@@ -61,7 +61,7 @@ public class Control {
 
             return new JsonResult(Status.success, ProcessType.get,"登录成功",token);
         }
-
+//登录失败
         return new JsonResult(Status.hasRegisty, ProcessType.get,"登录失败，用户名或密码错误",null);
 
     }
