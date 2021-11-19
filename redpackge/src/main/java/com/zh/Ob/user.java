@@ -21,6 +21,7 @@ public class user {
     @GeneratedValue
     private int id;
     private String name;
+    private String passowrd;
     @OneToMany(mappedBy = "user",cascade = {CascadeType.MERGE,CascadeType.REFRESH,CascadeType.REMOVE})
 //    必须是list，不能是arraylist
     private List<book> books;

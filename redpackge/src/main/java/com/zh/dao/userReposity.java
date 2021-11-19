@@ -8,6 +8,7 @@ import java.util.List;
 public interface userReposity extends JpaRepository<user,Integer> {
     int deleteByName(String s);
 //    根据书名查找user实体
+    user findByName(String name);
     List<user> findByBooks_nameContaining(String s);
 
 }
