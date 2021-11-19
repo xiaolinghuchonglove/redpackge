@@ -11,6 +11,7 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.cache.spi.entry.StandardCacheEntryImpl;
+import org.hibernate.internal.util.StringHelper;
 
 import java.security.SignatureException;
 import java.util.Calendar;
@@ -40,7 +41,7 @@ public class jwtUtils {
             builder.withClaim(key,value);
         });
         Calendar time01 =  Calendar.getInstance();
-        time01.add(Calendar.SECOND, 30);
+        time01.add(Calendar.SECOND, 90);
        Date time = time01.getTime();
         log.info(builder.withExpiresAt(time).sign(Algorithm.HMAC256(key)));
       return   builder.withExpiresAt(time).sign(Algorithm.HMAC256(key));
@@ -64,5 +65,19 @@ public class jwtUtils {
 
     }
 
+    /**
+     * 获取token中的payload
+     * @param token
+     * @param name
+     * @return
+     */
+    public static String verify(String token, String name){
+        JWTVerifier check = JWT.require(Algorithm.HMAC256(key)).build();
+//        创建解码后的 token对象
+        DecodedJWT check02 = check.verify(token);
+
+        return check02.getClaim(name).asString();
+
+    }
 
 }
