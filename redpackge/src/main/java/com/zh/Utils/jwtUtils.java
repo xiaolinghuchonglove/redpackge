@@ -28,6 +28,7 @@ public class jwtUtils {
 
         key = "whxo321@77&jsj";
         builder = JWT.create();
+
     }
 
     /**

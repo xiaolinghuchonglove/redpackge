@@ -11,6 +11,7 @@ import com.zh.services.DeleteService;
 import com.zh.services.SendService;
 import com.zh.services.registyServices;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -20,6 +21,7 @@ import java.util.Set;
 
 @RestController
 @Slf4j
+
 public class Control {
     @Resource
     private SendService SendService;

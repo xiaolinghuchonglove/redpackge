@@ -35,6 +35,8 @@ public class hasloginInterceptor implements HandlerInterceptor {
 //            拦截对接口访问
 //            return false;
 //            }
+
+
 //            验证token,如果失败剖出异常
             jwtUtils.verify(request.getHeader("token"));
             return true;
