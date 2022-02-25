@@ -1,0 +1,19 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: eureka-sever #应用名称
+eureka:
+  instance:
+    hostname: localhost02  #主机名
+  client:
+#    register-with-eureka: false  #是否将自己自注册到注册中心，默认为true
+#    fetch-registry: false  #是否从注册中心获取服务注册信息，默认为truw
+    service-url: #注册中心eureka-sever01对外报楼的的注册地址,可以将eureka-sever02注册到01
+      defaultZone: http://localhost:8761/eureka/
+
+
+
+
+
+

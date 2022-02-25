@@ -1,0 +1,21 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: eureka-sever #应用名称
+eureka:
+  instance:
+    hostname: localhost01  #主机名
+    prefer-ip-address: true #是否使用ip地址注册
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+#    register-with-eureka: false  #是否将自己自注册到注册中心，默认为true
+#    fetch-registry: false  #是否从注册中心获取服务注册信息，默认为truw
+    service-url: #注册中心对外报楼的的注册地址
+      defaultZone: http://localhost:8762/eureka/
+
+
+
+
+
+
